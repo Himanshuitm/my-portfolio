@@ -6,6 +6,8 @@ const body = document.body;
 const typedText = document.querySelector('.typed-text');
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navMenu = document.getElementById('navMenu');
 
 // Terminal typing effect
 const commands = [
@@ -66,6 +68,32 @@ if (savedTheme) {
 } else {
     body.classList.add('dark-theme'); // Default theme
 }
+
+// Mobile Menu Toggle
+mobileMenuToggle.addEventListener('click', () => {
+    mobileMenuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', closeMobileMenuOnOutsideClick);
+});
+
+function closeMobileMenuOnOutsideClick(event) {
+    if (!mobileMenuToggle.contains(event.target) && !navMenu.contains(event.target)) {
+        mobileMenuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.removeEventListener('click', closeMobileMenuOnOutsideClick);
+    }
+}
+
+// Close mobile menu when clicking on nav links
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.removeEventListener('click', closeMobileMenuOnOutsideClick);
+    });
+});
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -90,7 +90,9 @@ This is a personal portfolio website for Himanshu Saini, a Full Stack Web Develo
 
 ```
 Changelog:
-- July 01, 2025. Initial setup
+- July 01, 2025. Initial setup - Terminal-style portfolio with PHP contact form
+- July 01, 2025. Enhanced with vector graphics, parallax effects, and CV download
+- July 01, 2025. Added responsive burger menu for mobile navigation
 ```
 
 ## User Preferences
