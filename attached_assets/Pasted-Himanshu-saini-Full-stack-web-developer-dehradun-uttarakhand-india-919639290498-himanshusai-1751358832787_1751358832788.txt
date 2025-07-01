@@ -1,0 +1,51 @@
+Himanshu saini
+Full stack web developer
+ dehradun uttarakhand india  +919639290498  himanshusaini8518@gmail.com
+ https://www.linkedin.com/in/himanshu-saini-25b036201
+Summary
+Full Stack Web Developer with 3+ years of experience in PHP, Laravel, MySQL, and the LAMP stack. Proficient in
+building RESTful APIs, database management, and deploying scalable web applications on AWS/Linux. Strong in
+debugging, problem-solving, and agile team collaboration.
+Technical Skills
+Languages
+    
+PHP, JavaScript, HTML, CSS, SQL
+Frameworks/Libraries
+    
+Laravel, React, REST API
+Database
+    
+MySQL (Eloquent ORM), PostgreSQL (basic)
+Tools/Platforms
+    
+Git, AWS, Linux, Apache, Docker (familiar), WordPress, Wix
+Studio
+Other
+    
+MVC architecture, API development, Agile practices
+Experience
+Hostcob Solutions Pvt Ltd
+Full Stack Web Developer
+Nov 2021 – Present
+Dehradun Uttarakhand
+Designed, developed, and maintained web applications using PHP, Laravel, MySQL, and the LAMP stack.
+Built and integrated RESTful APIs for mobile applications, including Byoli.com, a matrimonial platform with
+Flutter app support.
+Developed custom billing systems and business applications using PHP and MySQL.
+Deployed and managed websites on AWS Linux servers, with Apache configuration for optimized hosting.
+Utilized Git for version control, collaborative development, and release management.
+Worked on Wix Studio and WordPress for tailored client projects and website deployments.
+Troubleshot, debugged, and optimized applications for better performance, scalability, and security.
+Projects
+Byoli.com Matrimonial Website
+Backend built with PHP (Laravel) and MySQL for a matrimonial platform with a responsive design.
+Developed robust APIs for a Flutter app, optimized database queries, and ensured secure user authentication and
+profile management.
+Second-Hand Book Marketplace
+PHP/MySQL platform for buying and selling pre-owned books, allowing users to list, search, and manage transactions.
+Implemented intuitive UI features, created a secure listing process, and ensured scalability to support hundreds of daily
+visits.
+Billing System (POS)
+PHP/MySQL-based Point of Sale (POS) and invoicing application for a local bakery
+Developed a streamlined POS interface using JavaScript for real-time order entry and billing, automated inventory
+tracking, and generated daily sales reports — reducing manual errors and improving overall transaction speed.
