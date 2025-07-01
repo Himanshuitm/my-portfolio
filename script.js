@@ -306,6 +306,121 @@ window.removeEventListener('scroll', updateActiveNavLink);
 window.addEventListener('scroll', debouncedParallax);
 window.addEventListener('scroll', debouncedNavUpdate);
 
+// CV Download functionality
+function downloadCV() {
+    const btn = document.querySelector('.cv-download-btn');
+    const btnText = btn.querySelector('.btn-text');
+    const originalText = btnText.textContent;
+    
+    // Show downloading state
+    btnText.textContent = 'Downloading...';
+    btn.disabled = true;
+    
+    // Simulate download process with terminal-style animation
+    const downloadSteps = [
+        'Initializing download...',
+        'Connecting to server...',
+        'Downloading CV...',
+        'Download complete!'
+    ];
+    
+    let stepIndex = 0;
+    const downloadInterval = setInterval(() => {
+        if (stepIndex < downloadSteps.length) {
+            btnText.textContent = downloadSteps[stepIndex];
+            stepIndex++;
+        } else {
+            clearInterval(downloadInterval);
+            
+            // Create download link
+            const link = document.createElement('a');
+            link.href = 'assets/Himanshu_Saini_CV.txt';
+            link.download = 'Himanshu_Saini_CV.txt';
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Reset button
+            setTimeout(() => {
+                btnText.textContent = originalText;
+                btn.disabled = false;
+                showMessage('CV downloaded successfully! 📄', 'success');
+            }, 500);
+        }
+    }, 800);
+}
+
+// Enhanced parallax scrolling with terminal opening effect
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.parallax-bg');
+    const terminalEffects = document.querySelector('.terminal-effects-bg');
+    
+    // Main parallax effect
+    parallaxElements.forEach((element, index) => {
+        const speed = 0.5 + (index * 0.1);
+        const yPos = -(scrolled * speed);
+        element.style.transform = `translate3d(0, ${yPos}px, 0)`;
+    });
+    
+    // Terminal opening effect
+    if (terminalEffects) {
+        const scrollProgress = Math.min(scrolled / window.innerHeight, 1);
+        const scale = 0.5 + (scrollProgress * 0.5);
+        const opacity = 0.1 + (scrollProgress * 0.2);
+        const rotation = scrollProgress * 5;
+        
+        terminalEffects.style.transform = `scale(${scale}) rotate(${rotation}deg)`;
+        terminalEffects.style.opacity = opacity;
+    }
+    
+    // Add downloading effect to sections as they come into view
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible && !section.classList.contains('loaded')) {
+            section.classList.add('loaded');
+            simulateTerminalLoading(section);
+        }
+    });
+});
+
+// Simulate terminal loading effect for sections
+function simulateTerminalLoading(section) {
+    const sectionHeader = section.querySelector('.section-header h2');
+    if (sectionHeader && !sectionHeader.dataset.animated) {
+        sectionHeader.dataset.animated = 'true';
+        const originalText = sectionHeader.textContent;
+        sectionHeader.textContent = '';
+        
+        // Typing effect for section headers
+        let charIndex = 0;
+        const typingInterval = setInterval(() => {
+            if (charIndex < originalText.length) {
+                sectionHeader.textContent += originalText[charIndex];
+                charIndex++;
+            } else {
+                clearInterval(typingInterval);
+                // Add completion indicator
+                setTimeout(() => {
+                    const cursor = document.createElement('span');
+                    cursor.textContent = ' ✓';
+                    cursor.style.color = 'var(--text-primary)';
+                    cursor.style.animation = 'blink 1s infinite';
+                    sectionHeader.appendChild(cursor);
+                    
+                    setTimeout(() => {
+                        cursor.remove();
+                    }, 2000);
+                }, 300);
+            }
+        }, 50);
+    }
+}
+
 // Console welcome message
 console.log(`
 ╔═══════════════════════════════════════════════════════════════╗
@@ -314,6 +429,7 @@ console.log(`
 ║                                                               ║
 ║  Thanks for checking out the console!                        ║
 ║  Try the Konami Code: ↑↑↓↓←→←→BA                            ║
+║  Download CV button: Click to get my resume!                 ║
 ║                                                               ║
 ║  Let's build something amazing together! 💻                  ║
 ║                                                               ║

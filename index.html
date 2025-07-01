@@ -46,31 +46,49 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section parallax-container">
         <div class="container">
-            <div class="terminal-window" data-aos="fade-up">
-                <div class="terminal-content">
-                    <div class="command-line">
-                        <span class="prompt">himanshu@portfolio:~$</span>
-                        <span class="command typed-text"></span>
-                        <span class="cursor">_</span>
+            <div class="hero-content">
+                <div class="hero-left" data-aos="fade-right">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <div class="command-line">
+                                <span class="prompt">himanshu@portfolio:~$</span>
+                                <span class="command typed-text"></span>
+                                <span class="cursor">_</span>
+                            </div>
+                            <div class="output">
+                                <h1 class="name-title">Himanshu Saini</h1>
+                                <p class="role">Full Stack Web Developer</p>
+                                <div class="contact-info">
+                                    <span><i class="fas fa-map-marker-alt"></i> Dehradun, Uttarakhand, India</span>
+                                    <span><i class="fas fa-phone"></i> +91 9639290498</span>
+                                    <span><i class="fas fa-envelope"></i> himanshusaini8518@gmail.com</span>
+                                </div>
+                                <div class="hero-actions">
+                                    <div class="social-links">
+                                        <a href="https://www.linkedin.com/in/himanshu-saini-25b036201" target="_blank">
+                                            <i class="fab fa-linkedin"></i> LinkedIn
+                                        </a>
+                                    </div>
+                                    <button class="cv-download-btn" onclick="downloadCV()">
+                                        <i class="fas fa-download"></i>
+                                        <span class="btn-text">Download CV</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="output">
-                        <h1 class="name-title">Himanshu Saini</h1>
-                        <p class="role">Full Stack Web Developer</p>
-                        <div class="contact-info">
-                            <span><i class="fas fa-map-marker-alt"></i> Dehradun, Uttarakhand, India</span>
-                            <span><i class="fas fa-phone"></i> +91 9639290498</span>
-                            <span><i class="fas fa-envelope"></i> himanshusaini8518@gmail.com</span>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/himanshu-saini-25b036201" target="_blank">
-                                <i class="fab fa-linkedin"></i> LinkedIn
-                            </a>
-                        </div>
+                </div>
+                <div class="hero-right" data-aos="fade-left">
+                    <div class="developer-vector">
+                        <img src="assets/developer-vector.svg" alt="Developer Illustration" class="vector-img">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="parallax-bg"></div>
+        <div class="parallax-bg hero-parallax"></div>
+        <div class="terminal-effects-bg">
+            <img src="assets/terminal-effects.svg" alt="Terminal Effects" class="terminal-effects">
+        </div>
     </section>
 
     <!-- About Section -->
@@ -80,26 +98,35 @@
                 <span class="prompt">$</span>
                 <h2>cat about.txt</h2>
             </div>
-            <div class="terminal-window" data-aos="fade-up">
-                <div class="terminal-content">
-                    <p class="about-text">
-                        Full Stack Web Developer with 3+ years of experience in PHP, Laravel, MySQL, and the LAMP stack. 
-                        Proficient in building RESTful APIs, database management, and deploying scalable web applications 
-                        on AWS/Linux. Strong in debugging, problem-solving, and agile team collaboration.
-                    </p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Experience</span>
+            <div class="about-content">
+                <div class="about-left" data-aos="fade-up">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <p class="about-text">
+                                Full Stack Web Developer with 3+ years of experience in PHP, Laravel, MySQL, and the LAMP stack. 
+                                Proficient in building RESTful APIs, database management, and deploying scalable web applications 
+                                on AWS/Linux. Strong in debugging, problem-solving, and agile team collaboration.
+                            </p>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">3+</span>
+                                    <span class="stat-label">Years Experience</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">10+</span>
+                                    <span class="stat-label">Projects Completed</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Client Satisfaction</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                        </div>
+                    </div>
+                </div>
+                <div class="about-right" data-aos="fade-left">
+                    <div class="coding-illustration">
+                        <img src="assets/coding-laptop.svg" alt="Coding Laptop" class="laptop-img">
                     </div>
                 </div>
             </div>

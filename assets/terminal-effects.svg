@@ -1,0 +1,100 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="downloadBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#64ffda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+    </linearGradient>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Terminal window -->
+  <rect x="50" y="50" width="500" height="300" rx="8" fill="#0f1419" stroke="#2d3748" stroke-width="2"/>
+  
+  <!-- Terminal header -->
+  <rect x="50" y="50" width="500" height="30" rx="8" fill="#1a1f2e"/>
+  <circle cx="70" cy="65" r="6" fill="#ff5f56"/>
+  <circle cx="90" cy="65" r="6" fill="#ffbd2e"/>
+  <circle cx="110" cy="65" r="6" fill="#27ca3f"/>
+  <text x="130" y="70" font-family="monospace" font-size="12" fill="#64ffda">terminal - downloading portfolio...</text>
+  
+  <!-- Download progress -->
+  <text x="70" y="110" font-family="monospace" font-size="12" fill="#00ff88">$ git clone https://github.com/himanshu/portfolio.git</text>
+  <text x="70" y="130" font-family="monospace" font-size="12" fill="#64ffda">Cloning into 'portfolio'...</text>
+  
+  <!-- Progress bar -->
+  <rect x="70" y="140" width="400" height="8" fill="#2d3748" rx="4"/>
+  <rect x="70" y="140" width="320" height="8" fill="url(#downloadBar)" rx="4">
+    <animate attributeName="width" values="0;400;400" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Download text -->
+  <text x="70" y="165" font-family="monospace" font-size="10" fill="#64ffda">
+    <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite"/>
+    Receiving objects: 100% (247/247), 2.3 MiB | 1.2 MiB/s, done.
+  </text>
+  
+  <!-- File extraction animation -->
+  <g opacity="0.8">
+    <text x="70" y="190" font-family="monospace" font-size="11" fill="#00ff88">
+      <animate attributeName="opacity" values="0;0;1;1" dur="3s" repeatCount="indefinite"/>
+      Extracting: index.html ✓
+    </text>
+    <text x="70" y="205" font-family="monospace" font-size="11" fill="#00ff88">
+      <animate attributeName="opacity" values="0;0;0;1" dur="3s" repeatCount="indefinite"/>
+      Extracting: styles.css ✓
+    </text>
+    <text x="70" y="220" font-family="monospace" font-size="11" fill="#00ff88">
+      <animate attributeName="opacity" values="0;0;0;0;1" dur="3s" repeatCount="indefinite"/>
+      Extracting: script.js ✓
+    </text>
+    <text x="70" y="235" font-family="monospace" font-size="11" fill="#ffd700">
+      <animate attributeName="opacity" values="0;0;0;0;0;1" dur="3s" repeatCount="indefinite"/>
+      Portfolio loaded successfully! 🚀
+    </text>
+  </g>
+  
+  <!-- Matrix-style code rain -->
+  <g opacity="0.2">
+    <text x="480" y="100" font-family="monospace" font-size="8" fill="#00ff88">1</text>
+    <text x="480" y="120" font-family="monospace" font-size="8" fill="#00ff88">0</text>
+    <text x="480" y="140" font-family="monospace" font-size="8" fill="#00ff88">1</text>
+    <text x="480" y="160" font-family="monospace" font-size="8" fill="#00ff88">1</text>
+    <text x="480" y="180" font-family="monospace" font-size="8" fill="#00ff88">0</text>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,50; 0,100" dur="2s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Floating code snippets -->
+  <g opacity="0.6" filter="url(#textGlow)">
+    <text x="300" y="280" font-family="monospace" font-size="10" fill="#64ffda" transform="rotate(-5 300 280)">
+      &lt;div class="portfolio"&gt;
+    </text>
+    <text x="320" y="300" font-family="monospace" font-size="10" fill="#ffd700" transform="rotate(5 320 300)">
+      function() { return 'awesome'; }
+    </text>
+    <text x="280" y="320" font-family="monospace" font-size="10" fill="#00ff88" transform="rotate(-3 280 320)">
+      SELECT * FROM skills;
+    </text>
+  </g>
+  
+  <!-- Loading dots -->
+  <text x="70" y="260" font-family="monospace" font-size="12" fill="#64ffda">Loading portfolio</text>
+  <text x="185" y="260" font-family="monospace" font-size="12" fill="#64ffda">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+    .
+  </text>
+  <text x="195" y="260" font-family="monospace" font-size="12" fill="#64ffda">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.3s" repeatCount="indefinite"/>
+    .
+  </text>
+  <text x="205" y="260" font-family="monospace" font-size="12" fill="#64ffda">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.6s" repeatCount="indefinite"/>
+    .
+  </text>
+</svg>

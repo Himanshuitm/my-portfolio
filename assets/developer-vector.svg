@@ -1,0 +1,95 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="screenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#64ffda;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="codePattern" patternUnits="userSpaceOnUse" width="20" height="20">
+      <rect width="20" height="20" fill="transparent"/>
+      <text x="2" y="12" font-family="monospace" font-size="8" fill="#2d3748" opacity="0.3">01</text>
+    </pattern>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#codePattern)" opacity="0.2"/>
+  
+  <!-- Desk -->
+  <rect x="50" y="320" width="300" height="15" rx="7" fill="#2d3748"/>
+  <rect x="40" y="335" width="320" height="25" rx="12" fill="#1a1f2e"/>
+  
+  <!-- Monitor -->
+  <rect x="120" y="180" width="160" height="100" rx="8" fill="#0f1419" stroke="#2d3748" stroke-width="2"/>
+  <rect x="130" y="190" width="140" height="80" rx="4" fill="#0a0e1a"/>
+  
+  <!-- Monitor screen content -->
+  <rect x="135" y="195" width="130" height="70" fill="url(#screenGlow)" opacity="0.3"/>
+  <text x="145" y="210" font-family="monospace" font-size="8" fill="#00ff88">$ npm start</text>
+  <text x="145" y="225" font-family="monospace" font-size="8" fill="#64ffda">✓ Compiled successfully</text>
+  <text x="145" y="240" font-family="monospace" font-size="8" fill="#ffd700">Local: http://localhost:3000</text>
+  <text x="145" y="255" font-family="monospace" font-size="8" fill="#00ff88">Ready for development!</text>
+  
+  <!-- Monitor stand -->
+  <rect x="190" y="280" width="20" height="40" fill="#2d3748"/>
+  <rect x="170" y="315" width="60" height="8" rx="4" fill="#1a1f2e"/>
+  
+  <!-- Keyboard -->
+  <rect x="100" y="330" width="200" height="20" rx="4" fill="#2d3748"/>
+  <rect x="105" y="333" width="8" height="6" rx="1" fill="#00ff88" opacity="0.7"/>
+  <rect x="118" y="333" width="8" height="6" rx="1" fill="#64ffda" opacity="0.7"/>
+  <rect x="131" y="333" width="8" height="6" rx="1" fill="#ffd700" opacity="0.7"/>
+  <rect x="144" y="333" width="8" height="6" rx="1" fill="#00ff88" opacity="0.7"/>
+  <rect x="157" y="333" width="8" height="6" rx="1" fill="#64ffda" opacity="0.7"/>
+  
+  <!-- Mouse -->
+  <ellipse cx="320" cy="340" rx="12" ry="8" fill="#2d3748"/>
+  <ellipse cx="320" cy="340" rx="8" ry="5" fill="#1a1f2e"/>
+  
+  <!-- Developer figure -->
+  <!-- Head -->
+  <circle cx="200" cy="120" r="25" fill="#ffd700" opacity="0.8"/>
+  
+  <!-- Body -->
+  <rect x="180" y="140" width="40" height="60" rx="20" fill="#64ffda" opacity="0.7"/>
+  
+  <!-- Arms -->
+  <rect x="160" y="150" width="15" height="40" rx="7" fill="#64ffda" opacity="0.7"/>
+  <rect x="225" y="150" width="15" height="40" rx="7" fill="#64ffda" opacity="0.7"/>
+  
+  <!-- Hands on keyboard -->
+  <circle cx="167" cy="195" r="8" fill="#ffd700" opacity="0.8"/>
+  <circle cx="232" cy="195" r="8" fill="#ffd700" opacity="0.8"/>
+  
+  <!-- Code floating around -->
+  <g opacity="0.6">
+    <text x="50" y="80" font-family="monospace" font-size="12" fill="#00ff88" transform="rotate(-15 50 80)">{ }</text>
+    <text x="320" y="100" font-family="monospace" font-size="14" fill="#64ffda" transform="rotate(10 320 100)">&lt;/&gt;</text>
+    <text x="80" y="150" font-family="monospace" font-size="10" fill="#ffd700" transform="rotate(-10 80 150)">PHP</text>
+    <text x="310" y="180" font-family="monospace" font-size="12" fill="#00ff88" transform="rotate(5 310 180)">API</text>
+    <text x="60" y="250" font-family="monospace" font-size="11" fill="#64ffda" transform="rotate(-5 60 250)">MySQL</text>
+    <text x="320" y="260" font-family="monospace" font-size="10" fill="#ffd700" transform="rotate(-8 320 260)">Laravel</text>
+  </g>
+  
+  <!-- Floating particles -->
+  <circle cx="100" cy="60" r="2" fill="#00ff88" filter="url(#glow)">
+    <animate attributeName="cy" values="60;40;60" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="80" r="2" fill="#64ffda" filter="url(#glow)">
+    <animate attributeName="cy" values="80;60;80" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="120" r="2" fill="#ffd700" filter="url(#glow)">
+    <animate attributeName="cy" values="120;100;120" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Terminal cursor -->
+  <rect x="250" y="250" width="3" height="10" fill="#00ff88">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

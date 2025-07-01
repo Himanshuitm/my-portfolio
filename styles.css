@@ -290,6 +290,38 @@ body {
     transform: translateY(-10%);
 }
 
+.hero-parallax {
+    background: radial-gradient(circle at 30% 50%, 
+        var(--shadow-color) 0%, 
+        transparent 50%),
+    linear-gradient(135deg, 
+        transparent 0%, 
+        var(--shadow-color) 30%, 
+        transparent 60%, 
+        var(--shadow-color) 90%, 
+        transparent 100%);
+    animation: parallaxMove 20s ease-in-out infinite;
+}
+
+@keyframes parallaxMove {
+    0%, 100% { 
+        transform: translateY(-10%) translateX(0%) rotate(0deg); 
+        opacity: 0.3;
+    }
+    25% { 
+        transform: translateY(-15%) translateX(5%) rotate(1deg); 
+        opacity: 0.5;
+    }
+    50% { 
+        transform: translateY(-5%) translateX(-3%) rotate(-0.5deg); 
+        opacity: 0.4;
+    }
+    75% { 
+        transform: translateY(-12%) translateX(2%) rotate(0.8deg); 
+        opacity: 0.6;
+    }
+}
+
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
@@ -298,6 +330,115 @@ body {
     justify-content: center;
     padding-top: 150px;
     position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-left {
+    z-index: 2;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.developer-vector {
+    max-width: 400px;
+    width: 100%;
+}
+
+.vector-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px var(--shadow-color));
+    transition: transform 0.3s ease;
+}
+
+.vector-img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.cv-download-btn {
+    background: linear-gradient(45deg, var(--text-accent), var(--text-primary));
+    border: none;
+    color: var(--bg-terminal);
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.cv-download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cv-download-btn:hover::before {
+    left: 100%;
+}
+
+.cv-download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.cv-download-btn:active {
+    transform: translateY(-1px);
+}
+
+.terminal-effects-bg {
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 600px;
+    height: 400px;
+    opacity: 0.1;
+    z-index: 1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.terminal-effects {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(1deg); }
 }
 
 .command-line {
@@ -371,6 +512,39 @@ body {
 }
 
 /* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-left {
+    z-index: 2;
+}
+
+.about-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coding-illustration {
+    max-width: 300px;
+    width: 100%;
+}
+
+.laptop-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 25px var(--shadow-color));
+    transition: transform 0.3s ease;
+}
+
+.laptop-img:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
 .about-text {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -744,6 +918,34 @@ body {
         text-align: center;
     }
     
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-right {
+        order: -1;
+    }
+    
+    .developer-vector {
+        max-width: 300px;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .cv-download-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .terminal-effects-bg {
+        display: none;
+    }
+    
     .name-title {
         font-size: 2rem;
     }
@@ -754,6 +956,20 @@ body {
     
     .contact-info {
         align-items: center;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .about-right {
+        order: -1;
+    }
+    
+    .coding-illustration {
+        max-width: 250px;
     }
     
     .section-header h2 {
