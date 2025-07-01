@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu Saini - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Terminal Header -->
+    <header class="terminal-header">
+        <div class="terminal-bar">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">himanshu-saini@portfolio:~$</div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="terminal-nav">
+        <div class="nav-container">
+            <div class="nav-prompt">$</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">./home</a></li>
+                <li><a href="#about" class="nav-link">./about</a></li>
+                <li><a href="#experience" class="nav-link">./experience</a></li>
+                <li><a href="#projects" class="nav-link">./projects</a></li>
+                <li><a href="#skills" class="nav-link">./skills</a></li>
+                <li><a href="#contact" class="nav-link">./contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section parallax-container">
+        <div class="container">
+            <div class="terminal-window" data-aos="fade-up">
+                <div class="terminal-content">
+                    <div class="command-line">
+                        <span class="prompt">himanshu@portfolio:~$</span>
+                        <span class="command typed-text"></span>
+                        <span class="cursor">_</span>
+                    </div>
+                    <div class="output">
+                        <h1 class="name-title">Himanshu Saini</h1>
+                        <p class="role">Full Stack Web Developer</p>
+                        <div class="contact-info">
+                            <span><i class="fas fa-map-marker-alt"></i> Dehradun, Uttarakhand, India</span>
+                            <span><i class="fas fa-phone"></i> +91 9639290498</span>
+                            <span><i class="fas fa-envelope"></i> himanshusaini8518@gmail.com</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/himanshu-saini-25b036201" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-bg"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-right">
+                <span class="prompt">$</span>
+                <h2>cat about.txt</h2>
+            </div>
+            <div class="terminal-window" data-aos="fade-up">
+                <div class="terminal-content">
+                    <p class="about-text">
+                        Full Stack Web Developer with 3+ years of experience in PHP, Laravel, MySQL, and the LAMP stack. 
+                        Proficient in building RESTful APIs, database management, and deploying scalable web applications 
+                        on AWS/Linux. Strong in debugging, problem-solving, and agile team collaboration.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section parallax-container">
+        <div class="container">
+            <div class="section-header" data-aos="fade-right">
+                <span class="prompt">$</span>
+                <h2>ls -la experience/</h2>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <div class="job-header">
+                                <h3>Full Stack Web Developer</h3>
+                                <span class="company">@ Hostcob Solutions Pvt Ltd</span>
+                                <span class="duration">Nov 2021 – Present</span>
+                                <span class="location">Dehradun, Uttarakhand</span>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Designed, developed, and maintained web applications using PHP, Laravel, MySQL, and the LAMP stack</li>
+                                <li>Built and integrated RESTful APIs for mobile applications, including Byoli.com matrimonial platform</li>
+                                <li>Developed custom billing systems and business applications using PHP and MySQL</li>
+                                <li>Deployed and managed websites on AWS Linux servers with Apache configuration</li>
+                                <li>Utilized Git for version control, collaborative development, and release management</li>
+                                <li>Worked on Wix Studio and WordPress for tailored client projects</li>
+                                <li>Troubleshot, debugged, and optimized applications for performance and security</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-bg"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-right">
+                <span class="prompt">$</span>
+                <h2>find ./projects -type f -name "*.php"</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-item" data-aos="fade-up">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <h3>Byoli.com Matrimonial Website</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Flutter API</span>
+                            </div>
+                            <p>Backend built with PHP (Laravel) and MySQL for a matrimonial platform with responsive design. 
+                            Developed robust APIs for Flutter app, optimized database queries, and ensured secure user 
+                            authentication and profile management.</p>
+                            <div class="project-features">
+                                <span><i class="fas fa-check"></i> RESTful API Development</span>
+                                <span><i class="fas fa-check"></i> Secure Authentication</span>
+                                <span><i class="fas fa-check"></i> Database Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <h3>Second-Hand Book Marketplace</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <p>PHP/MySQL platform for buying and selling pre-owned books, allowing users to list, search, 
+                            and manage transactions. Implemented intuitive UI features and secure listing process, 
+                            supporting hundreds of daily visits.</p>
+                            <div class="project-features">
+                                <span><i class="fas fa-check"></i> Search & Filter System</span>
+                                <span><i class="fas fa-check"></i> Transaction Management</span>
+                                <span><i class="fas fa-check"></i> Scalable Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <h3>Billing System (POS)</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">POS</span>
+                            </div>
+                            <p>PHP/MySQL-based Point of Sale and invoicing application for local bakery. 
+                            Developed streamlined POS interface with real-time order entry, automated inventory 
+                            tracking, and daily sales reports.</p>
+                            <div class="project-features">
+                                <span><i class="fas fa-check"></i> Real-time Processing</span>
+                                <span><i class="fas fa-check"></i> Inventory Management</span>
+                                <span><i class="fas fa-check"></i> Sales Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section parallax-container">
+        <div class="container">
+            <div class="section-header" data-aos="fade-right">
+                <span class="prompt">$</span>
+                <h2>cat skills.json | jq '.'</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <h3>Languages</h3>
+                            <div class="skill-list">
+                                <div class="skill-item">
+                                    <span class="skill-name">PHP</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">JavaScript</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">SQL</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="88%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <h3>Frameworks/Libraries</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Laravel</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">REST API</span>
+                                <span class="skill-tag">Eloquent ORM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <h3>Database & Tools</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">Apache</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">WordPress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-bg"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-right">
+                <span class="prompt">$</span>
+                <h2>nano contact-form.php</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <h3>Get In Touch</h3>
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>himanshusaini8518@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+91 9639290498</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Dehradun, Uttarakhand, India</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fab fa-linkedin"></i>
+                                    <a href="https://www.linkedin.com/in/himanshu-saini-25b036201" target="_blank">LinkedIn Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container" data-aos="fade-left">
+                    <div class="terminal-window">
+                        <div class="terminal-content">
+                            <form id="contactForm" class="contact-form" action="contact.php" method="POST">
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject:</label>
+                                    <input type="text" id="subject" name="subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                            <div id="formMessage" class="form-message"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="terminal-window">
+                <div class="terminal-content">
+                    <div class="footer-content">
+                        <p>&copy; 2025 Himanshu Saini. All rights reserved.</p>
+                        <div class="footer-command">
+                            <span class="prompt">$</span>
+                            <span>echo "Thanks for visiting my portfolio!"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

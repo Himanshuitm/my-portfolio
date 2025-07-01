@@ -1,0 +1,85 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2d3748" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    <linearGradient id="terminalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#64ffda;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0.1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0a0e1a"/>
+  
+  <!-- Grid pattern -->
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  
+  <!-- Terminal window mockup -->
+  <rect x="50" y="50" width="300" height="200" rx="8" fill="#1a1f2e" stroke="#2d3748" stroke-width="1"/>
+  <rect x="50" y="50" width="300" height="30" rx="8" fill="#0f1419"/>
+  <circle cx="70" cy="65" r="6" fill="#ff5f56"/>
+  <circle cx="90" cy="65" r="6" fill="#ffbd2e"/>
+  <circle cx="110" cy="65" r="6" fill="#27ca3f"/>
+  
+  <!-- Terminal text -->
+  <text x="70" y="110" font-family="monospace" font-size="12" fill="#00ff88">$ whoami</text>
+  <text x="70" y="130" font-family="monospace" font-size="12" fill="#64ffda">himanshu-saini</text>
+  <text x="70" y="150" font-family="monospace" font-size="12" fill="#00ff88">$ cat skills.txt</text>
+  <text x="70" y="170" font-family="monospace" font-size="12" fill="#64ffda">PHP | Laravel | MySQL</text>
+  <text x="70" y="190" font-family="monospace" font-size="12" fill="#64ffda">JavaScript | React | API</text>
+  <text x="70" y="210" font-family="monospace" font-size="12" fill="#00ff88">$ git status</text>
+  <text x="70" y="230" font-family="monospace" font-size="12" fill="#ffd700">Ready to collaborate!</text>
+  
+  <!-- Code blocks -->
+  <rect x="400" y="100" width="350" height="150" rx="8" fill="#1a1f2e" stroke="#2d3748" stroke-width="1" opacity="0.7"/>
+  <text x="420" y="130" font-family="monospace" font-size="10" fill="#64ffda">&lt;?php</text>
+  <text x="420" y="150" font-family="monospace" font-size="10" fill="#00ff88">class Developer {</text>
+  <text x="440" y="170" font-family="monospace" font-size="10" fill="#64ffda">public $name = 'Himanshu';</text>
+  <text x="440" y="190" font-family="monospace" font-size="10" fill="#64ffda">public $experience = '3+ years';</text>
+  <text x="440" y="210" font-family="monospace" font-size="10" fill="#64ffda">public $skills = ['PHP', 'Laravel'];</text>
+  <text x="420" y="230" font-family="monospace" font-size="10" fill="#00ff88">}</text>
+  
+  <!-- Network nodes -->
+  <circle cx="850" cy="150" r="4" fill="#00ff88" filter="url(#glow)"/>
+  <circle cx="900" cy="200" r="4" fill="#64ffda" filter="url(#glow)"/>
+  <circle cx="800" cy="250" r="4" fill="#ffd700" filter="url(#glow)"/>
+  <circle cx="950" cy="120" r="4" fill="#00ff88" filter="url(#glow)"/>
+  
+  <!-- Connecting lines -->
+  <line x1="850" y1="150" x2="900" y2="200" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+  <line x1="900" y1="200" x2="800" y2="250" stroke="#64ffda" stroke-width="1" opacity="0.5"/>
+  <line x1="800" y1="250" x2="950" y2="120" stroke="#ffd700" stroke-width="1" opacity="0.5"/>
+  <line x1="950" y1="120" x2="850" y2="150" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Binary background -->
+  <text x="100" y="350" font-family="monospace" font-size="8" fill="#2d3748" opacity="0.3">01001000 01101001 01101101 01100001 01101110 01110011 01101000 01110101</text>
+  <text x="100" y="370" font-family="monospace" font-size="8" fill="#2d3748" opacity="0.3">01010000 01001000 01010000 00100000 01000100 01100101 01110110 01100101</text>
+  <text x="100" y="390" font-family="monospace" font-size="8" fill="#2d3748" opacity="0.3">01101100 01101111 01110000 01100101 01110010 00100000 01000110 01110101</text>
+  <text x="100" y="410" font-family="monospace" font-size="8" fill="#2d3748" opacity="0.3">01101100 01101100 00100000 01010011 01110100 01100001 01100011 01101011</text>
+  
+  <!-- Gradient overlay -->
+  <rect width="1200" height="800" fill="url(#terminalGrad)" opacity="0.3"/>
+  
+  <!-- Floating elements -->
+  <g opacity="0.6">
+    <text x="200" y="500" font-family="monospace" font-size="14" fill="#00ff88" transform="rotate(-15 200 500)">{ API }</text>
+    <text x="500" y="450" font-family="monospace" font-size="16" fill="#64ffda" transform="rotate(10 500 450)">&lt;/Laravel&gt;</text>
+    <text x="800" y="500" font-family="monospace" font-size="12" fill="#ffd700" transform="rotate(-10 800 500)">MySQL</text>
+    <text x="300" y="600" font-family="monospace" font-size="14" fill="#00ff88" transform="rotate(5 300 600)">React</text>
+    <text x="700" y="600" font-family="monospace" font-size="12" fill="#64ffda" transform="rotate(-5 700 600)">JavaScript</text>
+  </g>
+  
+  <!-- Terminal cursor -->
+  <rect x="280" y="230" width="8" height="12" fill="#00ff88" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
