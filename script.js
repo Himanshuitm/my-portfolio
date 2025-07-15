@@ -142,54 +142,6 @@ function animateSkillBars() {
 // Initialize skill bars animation
 animateSkillBars();
 
-// Contact form handling
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const submitBtn = contactForm.querySelector('.submit-btn');
-    const btnText = submitBtn.querySelector('.btn-text');
-    
-    // Show loading state
-    btnText.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    
-    try {
-        const response = await fetch('contact.php', {
-            method: 'POST',
-            body: formData
-        });
-        
-        const result = await response.json();
-        
-        if (result.success) {
-            showMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
-            contactForm.reset();
-        } else {
-            showMessage(result.message || 'Something went wrong. Please try again.', 'error');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        showMessage('Network error. Please check your connection and try again.', 'error');
-    } finally {
-        // Reset button state
-        btnText.textContent = 'Send Message';
-        submitBtn.disabled = false;
-    }
-});
-
-// Show form message
-function showMessage(message, type) {
-    formMessage.textContent = message;
-    formMessage.className = `form-message ${type}`;
-    formMessage.style.display = 'block';
-    
-    // Hide message after 5 seconds
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-    }, 5000);
-}
-
 // Active navigation link highlighting
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section');
@@ -449,6 +401,52 @@ function simulateTerminalLoading(section) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        btnText.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                showMessage("✅ Message sent successfully!", 'success');
+                contactForm.reset();
+            } else {
+                showMessage("❌ Something went wrong. Try again.", 'error');
+            }
+        } catch (error) {
+            console.error(error);
+            showMessage("⚠️ Network error. Please try again.", 'error');
+        } finally {
+            btnText.textContent = 'Send Message';
+            submitBtn.disabled = false;
+        }
+    });
+
+    function showMessage(message, type) {
+        formMessage.textContent = message;
+        formMessage.className = `form-message ${type}`;
+        formMessage.style.display = 'block';
+
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+        }, 5000);
+    }
+});
+
 // Console welcome message
 console.log(`
 ╔═══════════════════════════════════════════════════════════════╗
@@ -456,7 +454,7 @@ console.log(`
 ║  🚀 Welcome to Himanshu Saini's Terminal Portfolio!          ║
 ║                                                               ║
 ║  Thanks for checking out the console!                        ║
-║  Try the Konami Code: ↑↑↓↓←→←→BA                            ║
+║                                                               ║
 ║  Download CV button: Click to get my resume!                 ║
 ║                                                               ║
 ║  Let's build something amazing together! 💻                  ║
