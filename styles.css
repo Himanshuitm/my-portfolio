@@ -78,7 +78,7 @@ body {
 /* Theme Toggle */
 .theme-toggle {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     width: 60px;
     height: 30px;
@@ -163,7 +163,7 @@ body {
 /* Navigation */
 .terminal-nav {
     position: fixed;
-    top: 60px;
+    top: 40px;
     left: 0;
     right: 0;
     background: var(--bg-terminal);
