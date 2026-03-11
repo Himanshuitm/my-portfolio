@@ -1,6 +1,7 @@
 /* ═══════════════════════════════════════════
    Himanshu Saini Portfolio — script.js
 ═══════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
 
 /* ════ LOADER ════ */
 const ldMsgs = ['LOADING MODULES...', 'PARSING JSON...', 'COMPILING ASSETS...', 'INJECTING STYLES...', 'READY!'];
@@ -591,3 +592,4 @@ console.log(
   '%c\nHimanshu Saini — Full Stack Developer\nOpen the Terminal widget for an interactive experience!\nhimanshusaini8518@gmail.com\n',
   'color:#00ff88;font-family:monospace;font-size:13px'
 );
+});
